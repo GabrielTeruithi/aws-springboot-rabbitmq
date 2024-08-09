@@ -1,0 +1,5 @@
+# Created at 2024-08-08T22:53:01.035
+Boot Manifest-JAR contains absolute paths in classpath 'D:\projects\java\ms-spring-rabbit-aws\proposta-app\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

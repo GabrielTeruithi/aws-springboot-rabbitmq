@@ -1,0 +1,14 @@
+com\gteruithi\propostaapp\dto\PropostaResponseDTO.class
+com\gteruithi\propostaapp\mapper\PropostaMapper.class
+com\gteruithi\propostaapp\entity\Usuario.class
+com\gteruithi\propostaapp\jobs\PropostaSemIntegracao.class
+com\gteruithi\propostaapp\config\CorsConfiguration.class
+com\gteruithi\propostaapp\entity\Proposta.class
+com\gteruithi\propostaapp\service\PropostaService.class
+com\gteruithi\propostaapp\dto\PropostaRequestDTO.class
+com\gteruithi\propostaapp\service\NotificacaoRabbitService.class
+com\gteruithi\propostaapp\repository\PropostaRepository.class
+com\gteruithi\propostaapp\controller\PropostaController.class
+com\gteruithi\propostaapp\mapper\PropostaMapperImpl.class
+com\gteruithi\propostaapp\config\RabbitMQConfiguration.class
+com\gteruithi\propostaapp\PropostaAppApplication.class
