@@ -19,6 +19,8 @@
       - Responsible for send SMS messages to the users for each step of the proccess, and if the loan was approved or declined.
    - proposta-app:
      - Responsible for received the loan request and communicate with the others microservices
+    
+  The communication between microservices are handled using rabbitmq and the core concepts like listeners, dead queue , etc.
 
 ## How To Use
 
