@@ -10,8 +10,8 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-08-08T22:52:58-0300",
-    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
+    date = "2024-08-16T13:22:15-0300",
+    comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.39.0.v20240725-1906, environment: Java 17.0.11 (Eclipse Adoptium)"
 )
 public class PropostaMapperImpl implements PropostaMapper {
 
@@ -24,11 +24,10 @@ public class PropostaMapperImpl implements PropostaMapper {
         Proposta proposta = new Proposta();
 
         proposta.setUsuario( propostaRequestDTOToUsuario( propostaRequestDTO ) );
-        proposta.setValorSolicitado( propostaRequestDTO.getValorSolicitado() );
         proposta.setPrazoPagamento( propostaRequestDTO.getPrazoPagamento() );
+        proposta.setValorSolicitado( propostaRequestDTO.getValorSolicitado() );
 
         proposta.setIntegrada( true );
-        proposta.setAprovada( false );
 
         return proposta;
     }
@@ -43,13 +42,13 @@ public class PropostaMapperImpl implements PropostaMapper {
 
         propostaResponseDTO.setNome( propostaUsuarioNome( proposta ) );
         propostaResponseDTO.setSobrenome( propostaUsuarioNome( proposta ) );
-        propostaResponseDTO.setCpf( propostaUsuarioCpf( proposta ) );
         propostaResponseDTO.setTelefone( propostaUsuarioTelefone( proposta ) );
+        propostaResponseDTO.setCpf( propostaUsuarioCpf( proposta ) );
         propostaResponseDTO.setRenda( propostaUsuarioRenda( proposta ) );
-        propostaResponseDTO.setId( proposta.getId() );
-        propostaResponseDTO.setPrazoPagamento( proposta.getPrazoPagamento() );
         propostaResponseDTO.setAprovada( proposta.getAprovada() );
+        propostaResponseDTO.setId( proposta.getId() );
         propostaResponseDTO.setObservacao( proposta.getObservacao() );
+        propostaResponseDTO.setPrazoPagamento( proposta.getPrazoPagamento() );
 
         propostaResponseDTO.setValorSolicitadoFmt( setValorSolicitadoFmt(proposta) );
 
@@ -101,21 +100,6 @@ public class PropostaMapperImpl implements PropostaMapper {
         return nome;
     }
 
-    private String propostaUsuarioCpf(Proposta proposta) {
-        if ( proposta == null ) {
-            return null;
-        }
-        Usuario usuario = proposta.getUsuario();
-        if ( usuario == null ) {
-            return null;
-        }
-        String cpf = usuario.getCpf();
-        if ( cpf == null ) {
-            return null;
-        }
-        return cpf;
-    }
-
     private String propostaUsuarioTelefone(Proposta proposta) {
         if ( proposta == null ) {
             return null;
@@ -129,6 +113,21 @@ public class PropostaMapperImpl implements PropostaMapper {
             return null;
         }
         return telefone;
+    }
+
+    private String propostaUsuarioCpf(Proposta proposta) {
+        if ( proposta == null ) {
+            return null;
+        }
+        Usuario usuario = proposta.getUsuario();
+        if ( usuario == null ) {
+            return null;
+        }
+        String cpf = usuario.getCpf();
+        if ( cpf == null ) {
+            return null;
+        }
+        return cpf;
     }
 
     private Double propostaUsuarioRenda(Proposta proposta) {

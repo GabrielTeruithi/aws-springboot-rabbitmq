@@ -7,8 +7,12 @@ com\gteruithi\propostaapp\entity\Proposta.class
 com\gteruithi\propostaapp\service\PropostaService.class
 com\gteruithi\propostaapp\dto\PropostaRequestDTO.class
 com\gteruithi\propostaapp\service\NotificacaoRabbitService.class
+com\pieropan\propostaapp\dto\UsuarioDto.class
 com\gteruithi\propostaapp\repository\PropostaRepository.class
 com\gteruithi\propostaapp\controller\PropostaController.class
+com\gteruithi\propostaapp\Listener\PropostaConcluidaListener.class
 com\gteruithi\propostaapp\mapper\PropostaMapperImpl.class
 com\gteruithi\propostaapp\config\RabbitMQConfiguration.class
+com\gteruithi\propostaapp\config\WebSocketConfiguration.class
+com\gteruithi\propostaapp\service\WebSocketService.class
 com\gteruithi\propostaapp\PropostaAppApplication.class

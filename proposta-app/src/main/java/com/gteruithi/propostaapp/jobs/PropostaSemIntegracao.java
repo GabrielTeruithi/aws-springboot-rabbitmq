@@ -33,6 +33,7 @@ public class PropostaSemIntegracao {
         propostaRepository.findAllByIntegradaIsFalse().forEach(proposta -> {
             try {
                 notificacaoRabbitService.notificar(proposta, exchange);
+                propostaRepository.atualizarStatusIntegrada(proposta.getId(), true);
                 atualizarProposta(proposta);
 
             } catch (RuntimeException ex) {

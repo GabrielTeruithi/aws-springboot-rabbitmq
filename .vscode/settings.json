@@ -1,0 +1,10 @@
+{
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "/home/gabrielto/.local/share/mise/installs/java/openjdk-17.0.2/",
+      "default": true
+    },
+  ]
+}

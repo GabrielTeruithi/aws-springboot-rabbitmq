@@ -1,4 +1,4 @@
-package com.gteruithi.notificacao.domain;
+package com.gteruithi.analise_credito.domain;
 
 import lombok.Getter;
 import lombok.Setter;

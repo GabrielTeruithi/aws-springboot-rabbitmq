@@ -21,16 +21,16 @@ public interface PropostaMapper {
     @Mapping(target = "usuario.telefone", source = "telefone")
     @Mapping(target = "usuario.renda", source = "renda")
     @Mapping(target = "id", ignore = true)
+    @Mapping(target = "aprovada", ignore = true)
     @Mapping(target = "integrada", constant = "true")
     @Mapping(target = "observacao", ignore = true)
-    @Mapping(target = "aprovada", constant = "false")
     Proposta convertRequestDtoToPropostaEntity(PropostaRequestDTO propostaRequestDTO);
 
 
     @Mapping(target = "nome", source = "usuario.nome")
     @Mapping(target = "sobrenome", source = "usuario.nome")
-    @Mapping(target = "cpf", source = "usuario.cpf")
     @Mapping(target = "telefone", source = "usuario.telefone")
+    @Mapping(target = "cpf", source = "usuario.cpf")
     @Mapping(target = "renda", source = "usuario.renda")
     @Mapping(target = "valorSolicitadoFmt", expression = "java(setValorSolicitadoFmt(proposta))")
     PropostaResponseDTO convertPropostaEntityToResponseDto(Proposta proposta);
